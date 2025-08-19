@@ -1,0 +1,33 @@
+# Simple Calculator by thebrodev
+
+def calculator():
+    print("=== Simple Calculator ===")
+    print("Operations: +  -  *  /")
+    
+    try:
+        x = float(input("Enter first number: "))
+        y = float(input("Enter second number: "))
+        op = input("Enter operation (+, -, *, /): ")
+
+        if op == "+":
+            result = x + y
+        elif op == "-":
+            result = x - y
+        elif op == "*":
+            result = x * y
+        elif op == "/":
+            if y == 0:
+                print("Error: Division by zero is not allowed!")
+                return
+            result = x / y
+        else:
+            print("Invalid operation!")
+            return
+
+        print(f"Result: {result}")
+
+    except ValueError:
+        print("Invalid input! Please enter numbers only.")
+
+# Run the calculator
+calculator()
